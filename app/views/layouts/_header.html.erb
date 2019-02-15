@@ -7,7 +7,7 @@
     <% else %>
       <%= link_to t("header.link_login"), login_path, class: "link_login" %>
       <i class="fa fa-qq" id=logo_login></i>
-      <%= link_to t("header.link_registration"), login_path, class: "link_login" %>
+      <%= link_to t("header.link_registration"), new_user_path, class: "link_login" %>
     <% end %>
     <div class="content_language">
       <%= t"header.language" %>
