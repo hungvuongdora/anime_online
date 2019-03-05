@@ -1,7 +1,6 @@
 Rails.application.routes.draw do
   scope "(:locale)", locale: /en|vi/ do
     root to: "static_pages#home"
-    root "static_pages#home"
     get "/login", to: "sessions#new"
     post "/login", to: "sessions#create"
     delete "/logout", to: "sessions#destroy"
@@ -15,5 +14,8 @@ Rails.application.routes.draw do
     end
     resources :movie_types
     resources :movie_type_years
+    resources :movie_searchs
+    resources :watch_movies
+    resources :comments
   end
 end
